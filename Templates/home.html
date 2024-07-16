@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if error %}
+
+    <h4 style="color: red;">{{error}}</h4>
+
+    {% endif %}
+    <h3>Enter The Chat Room</h3>
+<form  method="POST">
+    
+    <div> 
+        <label>Name: </label>
+        <input type="text" placeholder="Pick a name!" name="name" value="{{name}}"/>
+ 
+    </div>
+
+    <div class="join">
+    <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
+    <input type="submit" name="join" value ="Join a Room"/>
+</div>
+    <input type="submit" name="create" value = "Create a Room"/>
+    
+</form>
+{% endblock %}
